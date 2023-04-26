@@ -125,6 +125,7 @@ public class MovimentoHorizontal : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collisior)
+
     {
         if (collisior.gameObject.tag == "Chão")
         {

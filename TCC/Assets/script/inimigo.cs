@@ -36,4 +36,24 @@ public class inimigo : MonoBehaviour
 
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collisior)
+    {
+
+        if (collisior.gameObject.tag == "inimigo")
+        {
+            Destroy(gameObject);
+        }
+
+
+
+
+    }
+
+
+
+
 }
+
+
+

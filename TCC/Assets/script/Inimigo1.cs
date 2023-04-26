@@ -5,20 +5,23 @@ using UnityEngine;
 public class Inimigo1 : MonoBehaviour
 {
 
-    public Transform posicaoPlayer;
-    public float velocidadeMovimento;
-    public float distancia;
+    public float StoppingDistance;
+    public float Speed;
+    private Transform Target;
    
     // Start is called before the first frame update
     void Start()
     {
-        
+        Target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        distancia = Vector3.Distance(transform.position, posicaoPlayer.transform.position);
+        if (Vector2.Distance(transform.position, Target.position) > StoppingDistance) 
+        {
+            transform.position = Vector2.MoveTowards(transform.position, Target.position, Speed * Time.deltaTime);
+        }
 
         
         
@@ -26,4 +29,19 @@ public class Inimigo1 : MonoBehaviour
 
 
     }
+
+    void OnCollisionEnter2D(Collision2D collisior)
+
+
+    {
+
+        if (collisior.gameObject.tag == "inimigo")
+        {
+            Destroy(gameObject);
+        }
+
+
+    }
+
+
 }

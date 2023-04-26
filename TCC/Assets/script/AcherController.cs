@@ -10,10 +10,12 @@ public class AcherController : MonoBehaviour
     public float velocidadeMovimento;
     public float distancia;
     public GameObject projetil;
+    public bool tempoTiro;
+    public GameObject tiroInimigo;
     // Start is called before the first frame update
     void Start()
     {
-       
+        tempoTiro = false;
     }
 
     // Update is called once per frame
@@ -22,11 +24,21 @@ public class AcherController : MonoBehaviour
 
         distancia = Vector3.Distance(transform.position, posicaoPlayer.transform.position);
 
-        if(distancia < 8)
+       
+
+        if (distancia < 8 && tempoTiro == false)
         {
             Instantiate(projetil, transform.position, Quaternion.identity);
+
+            projetil.transform.Translate(new Vector2(-1, 0) * 2 * Time.deltaTime);
+
+            tempoTiro = true;
+
+            StartCoroutine(tiroNovo());
+
         }
 
+       
 
         transform.position = Vector3.MoveTowards(transform.position, posicaoPlayer.position, velocidadeMovimento * Time.deltaTime);
 
@@ -34,5 +46,35 @@ public class AcherController : MonoBehaviour
 
     }
 
-   
+    IEnumerator tiroNovo()
+    {
+        
+        yield return new WaitForSeconds(2f);
+        tempoTiro = false;
+
+
+    }
+
+    void OnCollisionEnter2D(Collision2D collisior)
+    {
+        /*
+
+        if (collisior.gameObject.tag == "inimigo")
+        {
+            Destroy(gameObject);
+        }
+
+
+        */
+
+
+
+    }
+
+
+
+
+
+
+
 }
