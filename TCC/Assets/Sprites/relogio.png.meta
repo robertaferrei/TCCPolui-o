@@ -115,7 +115,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: relogio_1
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 437
+        width: 422
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b9d9f9f4b4a584c9f460322cf99054
+      internalID: -33320494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +147,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      relogio_9: -1716752775
+      relogio_3: -968197950
+      relogio_8: 1595103475
+      relogio_5: -153340366
+      relogio_6: -1318424601
+      relogio_4: 1988115229
+      relogio_1: -33320494
+      relogio_2: 784253711
+      relogio_7: 371922131
+      relogio_0: 693008912
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
