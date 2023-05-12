@@ -50,7 +50,15 @@ public class MovimentoHorizontal : MonoBehaviour
     public int qntVidaAtual;
     public int qntVida;
     public int coins;
-
+    public int MacaColetavel;
+    public int bananacoletavel;
+    public int papelcoletavel;
+    public int coxacoletavel;
+    public int espinhacoletavel;
+    public int latacoletavel;
+    public int lixocoletavel;
+    public int lata2coletavel;
+    public int lampadacoletavel;
     public TextMeshProUGUI textoMoedas;
 
     private AudioSource sound;
@@ -60,6 +68,8 @@ public class MovimentoHorizontal : MonoBehaviour
 
     public TextMeshProUGUI timetext;
     public float tempo;
+    public float tempoAtual;
+    public float tempoAtualizado;
 
     // Start is called before the first frame update
     void Start()
@@ -174,7 +184,10 @@ public class MovimentoHorizontal : MonoBehaviour
     public void tempoMoeda()
     {
         tempo += Time.deltaTime;
-        timetext.text = tempo.ToString("0");
+
+        tempoAtualizado = tempoAtual - tempo;
+     
+        timetext.text = tempoAtualizado.ToString("0");
         textoMoedas.text = coins.ToString();
     }
 
@@ -258,5 +271,65 @@ public class MovimentoHorizontal : MonoBehaviour
             sound.PlayOneShot(somMoeda);
             Destroy(col.gameObject);
         }
+
+        if (col.gameObject.tag == "MacaColetavel")
+        {
+           // MacaColetavel += 1;
+          Destroy(col.gameObject);
+        }
+
+        if (col.gameObject.tag == "bananacoletavel")
+        {
+            Destroy(col.gameObject);
+
+        }
+
+
+        if (col.gameObject.tag == "papelcoletavel")
+
+        {
+            Destroy(col.gameObject);
+        }
+
+        if (col.gameObject.tag == "coxacoletavel")
+
+        {
+            Destroy(col.gameObject);
+        }
+
+        if (col.gameObject.tag == "espinhacoletavel")
+
+        {
+            Destroy(col.gameObject);
+        }
+
+        if (col.gameObject.tag == "latacoletavel")
+
+        {
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "lixocoletavel")
+
+        {
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "lata2coletavel")
+        {
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "lampadacoletavel")
+        {
+            Destroy(col.gameObject);
+        }
+
+
+
+
+
+
     }
+
+
+
+
 }

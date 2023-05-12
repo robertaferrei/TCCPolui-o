@@ -12,6 +12,8 @@ public class AcherController : MonoBehaviour
     public GameObject projetil;
     public bool tempoTiro;
     public GameObject tiroInimigo;
+    public Transform posicaoTiro;
+    public Transform posicaoTiroInimigo;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,15 +24,15 @@ public class AcherController : MonoBehaviour
     void Update()
     {
 
-        distancia = Vector3.Distance(transform.position, posicaoPlayer.transform.position);
+      //  distancia = Vector3.Distance(transform.position, posicaoPlayer.transform.position);
 
        
 
-        if (distancia < 8 && tempoTiro == false)
+        if (tempoTiro == false)
         {
-            Instantiate(projetil, transform.position, Quaternion.identity);
+            Instantiate(projetil, posicaoTiroInimigo.position, Quaternion.identity);
 
-            projetil.transform.Translate(new Vector2(-1, 0) * 2 * Time.deltaTime);
+           
 
             tempoTiro = true;
 
@@ -40,7 +42,7 @@ public class AcherController : MonoBehaviour
 
        
 
-        transform.position = Vector3.MoveTowards(transform.position, posicaoPlayer.position, velocidadeMovimento * Time.deltaTime);
+       // transform.position = Vector3.MoveTowards(transform.position, posicaoTiro.position, velocidadeMovimento * Time.deltaTime);
 
         
 

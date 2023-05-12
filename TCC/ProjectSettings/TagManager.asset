@@ -9,15 +9,25 @@ TagManager:
   - sensor
   - inimigorefri
   - coins
+  - coletalM
+  - MacaColetavel
+  - bananacoletavel
+  - papelcoletavel
+  - coxacoletavel
+  - espinhacoletavel
+  - latacoletavel
+  - lixocoletavel
+  - lata2coletavel
+  - lampadacoletavel
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - tiro
   - Water
   - UI
   - "Ch\xE3o"
-  - 
+  - Player
   - 
   - 
   - 
