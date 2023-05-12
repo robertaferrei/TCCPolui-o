@@ -61,6 +61,10 @@ public class MovimentoHorizontal : MonoBehaviour
     public TextMeshProUGUI timetext;
     public float tempo;
 
+    public GameObject Bandeira;
+    public Button fechar;
+    private bool ativarTempo; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +76,8 @@ public class MovimentoHorizontal : MonoBehaviour
         qntVidaAtual = 5;
         qntVida = qntVidaAtual;
         sound = GetComponent<AudioSource>();
+
+        fechar.interactable = false;
     }
 
     // Update is called once per frame
@@ -83,6 +89,15 @@ public class MovimentoHorizontal : MonoBehaviour
         run();
         Shoot();
         tempoMoeda();
+
+        if (ativarTempo == true)
+        {
+            tempo += Time.deltaTime;
+        }
+        if (tempo >= 10)
+        {
+            fechar.interactable = true;
+;        }
     }
 
     //Minhas funções
@@ -123,7 +138,7 @@ public class MovimentoHorizontal : MonoBehaviour
 
         transform.Translate(new Vector3(1 * movimentoHorizntal, 1 * movimentoVertical, 0) * velocidade * Time.deltaTime);
     }
-
+    /*
     void OnCollisionEnter2D(Collision2D collisior)
 
     {
@@ -136,7 +151,7 @@ public class MovimentoHorizontal : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
+    }*/
 
     void OnCollisionExit2D(Collision2D collisior)
     {
@@ -257,6 +272,12 @@ public class MovimentoHorizontal : MonoBehaviour
             coins++;
             sound.PlayOneShot(somMoeda);
             Destroy(col.gameObject);
+        }
+        
+        if (col.gameObject.tag == "informacoes")
+        {
+            Bandeira.SetActive(true);
+            ativarTempo = true; 
         }
     }
 }
