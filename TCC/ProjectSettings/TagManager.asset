@@ -9,6 +9,7 @@ TagManager:
   - sensor
   - inimigorefri
   - coins
+<<<<<<< HEAD
   - coletalM
   - MacaColetavel
   - bananacoletavel
@@ -19,6 +20,9 @@ TagManager:
   - lixocoletavel
   - lata2coletavel
   - lampadacoletavel
+=======
+  - informacoes
+>>>>>>> 86d467a1219a716220a75bb2fdae7f77cc1895ad
   layers:
   - Default
   - TransparentFX
