@@ -3,35 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - "Ch\xE3o"
-  - inimigo
-  - sensor
-  - inimigorefri
-  - coins
-<<<<<<< HEAD
-  - coletalM
-  - MacaColetavel
-  - bananacoletavel
-  - papelcoletavel
-  - coxacoletavel
-  - espinhacoletavel
-  - latacoletavel
-  - lixocoletavel
-  - lata2coletavel
-  - lampadacoletavel
-=======
-  - informacoes
->>>>>>> 86d467a1219a716220a75bb2fdae7f77cc1895ad
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - tiro
+  - 
   - Water
   - UI
-  - "Ch\xE3o"
-  - Player
+  - 
+  - 
   - 
   - 
   - 
