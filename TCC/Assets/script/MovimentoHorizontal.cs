@@ -59,6 +59,8 @@ public class MovimentoHorizontal : MonoBehaviour
     public int lixocoletavel;
     public int lata2coletavel;
     public int lampadacoletavel;
+    public int TACAcoletavel;
+    public int garrafinhacoletavel;
     public TextMeshProUGUI textoMoedas;
 
     private AudioSource sound;
@@ -286,7 +288,7 @@ public class MovimentoHorizontal : MonoBehaviour
             sound.PlayOneShot(somMoeda);
             Destroy(col.gameObject);
         }
-<<<<<<< HEAD
+
 
         if (col.gameObject.tag == "MacaColetavel")
         {
@@ -338,19 +340,24 @@ public class MovimentoHorizontal : MonoBehaviour
             Destroy(col.gameObject);
         }
 
+        if (col.gameObject.tag == "TACAcoletavel")
+        {
+            Destroy(col.gameObject);
+        }
+        if(col.gameObject.tag== "garrafinhacoletavel")
+        {
+            Destroy(col.gameObject);
+
+        }   
 
 
 
-
-
-=======
-        
         if (col.gameObject.tag == "informacoes")
         {
             Bandeira.SetActive(true);
             ativarTempo = true; 
         }
->>>>>>> 86d467a1219a716220a75bb2fdae7f77cc1895ad
+
     }
 
 

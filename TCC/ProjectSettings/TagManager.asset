@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - inimigo
+  - lixocoletavel
+  - MacaColetavel
+  - papelcoletavel
+  - sensor
+  - coxacoletavel
+  - coins
+  - espinhacoletavel
+  - bananacoletavel
+  - TACAcoletavel
+  - garrafinhacoletavel
   layers:
   - Default
   - TransparentFX
