@@ -5,30 +5,20 @@ using UnityEngine;
 
 public class AcherController : MonoBehaviour
 {
-
-    public Transform posicaoPlayer;
     public float velocidadeMovimento;
-    public float distancia;
     public GameObject projetil;
     public bool tempoTiro;
-    public GameObject tiroInimigo;
-    public Transform posicaoTiro;
     public Transform posicaoTiroInimigo;
-    // Start is called before the first frame update
+   
     void Start()
     {
         tempoTiro = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
 
-      //  distancia = Vector3.Distance(transform.position, posicaoPlayer.transform.position);
-
-       
-
-        if (tempoTiro == false)
+         if (tempoTiro == false)
         {
             Instantiate(projetil, posicaoTiroInimigo.position, Quaternion.identity);
 
@@ -40,11 +30,6 @@ public class AcherController : MonoBehaviour
 
         }
 
-       
-
-       // transform.position = Vector3.MoveTowards(transform.position, posicaoTiro.position, velocidadeMovimento * Time.deltaTime);
-
-        
 
     }
 

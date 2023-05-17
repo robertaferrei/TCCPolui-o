@@ -14,6 +14,7 @@ public class Atirar : MonoBehaviour
     {
         transform.Translate(new Vector2(1, 0) * Time.deltaTime * speed);
 
+      
     }
 
 
@@ -38,13 +39,12 @@ public class Atirar : MonoBehaviour
             bala.GetComponent<Rigidbody2D>().AddForce(Camera.main.transform.forward * 1000);
 
 
-
-
+            
+                
 
         }
 
-
-
+        
 
 
     }

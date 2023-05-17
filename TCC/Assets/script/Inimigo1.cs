@@ -27,16 +27,40 @@ public class Inimigo1 : MonoBehaviour
 
         
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("tiroPlayer"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        } 
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //void OnCollisionEnter2D(Collision2D collisior)
-      
+
 
     //{
 
-        //if (collisior.gameObject.tag == "inimigo")
-        //{
-           // Destroy(gameObject);
-        }
+    //if (collisior.gameObject.tag == "inimigo")
+    //{
+    // Destroy(gameObject);
+}
 
 
    // }

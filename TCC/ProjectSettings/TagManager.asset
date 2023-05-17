@@ -15,14 +15,15 @@ TagManager:
   - bananacoletavel
   - TACAcoletavel
   - garrafinhacoletavel
+  - tiroPlayer
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - boladePapel
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
